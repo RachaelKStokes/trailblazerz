@@ -1,0 +1,8 @@
+h1 {
+    font-family: "Faster One", sans-serif;
+    font-size: 110px;
+    background: linear-gradient(to bottom, #f32170, 
+                    #ff6b08, #eedd44); 
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text;
+}

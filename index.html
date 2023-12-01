@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trailblazerz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/superhero/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet">
 </head>
 <!-- added html structure-->
-
-
+<!-- add a font family-->
+<!--added styling to html elements-->
 <body>
-    <div name="home page">
+    <div name="homePage" class="d-flex flex-column text-center">
 
-        <h1>Trailblazerz</h1>
-        <h2>Instructions</h2>
-        <p> Type in a city where you want to find the nearest fireball impact on the ground.  See what turns up!</p>
+        <h1 class="mt-2">TRAILBLAZERZ</h1>
+        <h2 class="font-weight-bolder">Instructions</h2>
+        <h4 class="">Type in a city where you want to find the nearest fireball impact on the ground. See what turns up!</h4>
        
-         <textarea name="userInput" id="userInput" cols="30" rows="10"> </textarea>
-        <button> submit </button>
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <textarea name="userInput" id="userInput" cols="60" rows="1" class="m-5"> </textarea>
+            <button class="m-5"> Submit </button>
+        </div>
+
     </div>
 
-    <div name="map page">
+    <div name="mapPage">
         <ul name="incidents">
         </ul>
 
@@ -27,5 +35,6 @@
         
     </div>
 </body>
+<!--linked js-->
 <script src="assets/script.js"></script>
 </html>
