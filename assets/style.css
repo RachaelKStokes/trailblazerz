@@ -6,3 +6,20 @@ h1 {
             -webkit-text-fill-color: transparent; 
             -webkit-background-clip: text;
 }
+/*added background image options*/
+body {
+    /*background-image: url("../images/adrian-n-ijxO4L-le4c-unsplash.jpg");*/
+    /*background-image: url("../images/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg");*/
+    background-image: url("../images/alexander-andrews-cdjsw6sjwly-unsplash cropped.jpg");
+    background-size: cover;
+}
+/*added button styling*/
+button {
+    border-radius: 10px;
+    background-color: #ff6b08;
+    background: linear-gradient(to bottom, #f32170, 
+    #ff6b08, #eedd44); 
+    color: white;
+    font-weight: 600;
+    border-color: white;
+}
