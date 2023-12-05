@@ -30,6 +30,12 @@ div h3 {
     top: 250px;
     left: 375px;
 }
+
+div div textarea {
+    position: absolute;
+    top: 275px;
+    left: 650px;
+}
 /*added background image options*/
 /*body {
     /*background-image: url("../images/adrian-n-ijxO4L-le4c-unsplash.jpg");*/
