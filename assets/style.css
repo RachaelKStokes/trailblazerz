@@ -18,6 +18,18 @@ header h1 {
             -webkit-background-clip: text;
     
 }
+
+div h2 {
+    position:absolute;
+    top: 200px;
+    left: 875px;
+}
+
+div h3 {
+    position: absolute;
+    top: 500px;
+    left: 800px;
+}
 /*added background image options*/
 /*body {
     /*background-image: url("../images/adrian-n-ijxO4L-le4c-unsplash.jpg");*/
