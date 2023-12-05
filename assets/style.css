@@ -1,17 +1,43 @@
-h1 {
+
+header {
+    position: relative;
+    text-align: center;
+
+}
+
+header h1 {
+    position: absolute;
+    top: 8px;
+    left: 475px;
+    padding: 15px;
     font-family: "Faster One", sans-serif;
     font-size: 110px;
     background: linear-gradient(to bottom, #f32170, 
                     #ff6b08, #eedd44); 
             -webkit-text-fill-color: transparent; 
             -webkit-background-clip: text;
+    
 }
 /*added background image options*/
-body {
+/*body {
     /*background-image: url("../images/adrian-n-ijxO4L-le4c-unsplash.jpg");*/
     /*background-image: url("../images/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg");*/
-    background-image: url("../images/alexander-andrews-cdjsw6sjwly-unsplash cropped.jpg");
+    /*background-image: url("../images/alexander-andrews-cdjsw6sjwly-unsplash cropped.jpg");
     background-size: cover;
+}*/
+
+/*added resizing to background image RS */
+#background img {
+  min-height: 100%;
+  min-width: 1024px;
+
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 /*added button styling*/
 button {
@@ -23,3 +49,12 @@ button {
     font-weight: 600;
     border-color: white;
 }
+
+/*resize background with screen RS */
+@media screen and (max-width: 1024px) {
+    background.img {
+        left: 50%;
+        margin-left: -512px;
+    }
+}
+    
