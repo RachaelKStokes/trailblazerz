@@ -22,25 +22,29 @@ function getCityGeoData() {
     }
 
 function getFireballData() {
-    fetch('https://ssd-api.jpl.nasa.gov/fireball.api?req-loc=true')
+    fetch('https://www.anthonycooper.me/nasa')
     .then(function(response) {
         return response.json();
     })
     .then(function(data) {
 
-// script example for map
-// var map = L.map('map', {
-//     center: [51.505, -0.09],
-//     zoom: 13
-// });
-// undefined
+// added map variable
+    var map = L.map('map', {
+    center: [51.505, -0.09],
+    zoom: 13
+    });
+    
 // script example to calculate distance
-// map
-// e {options: {…}, _handlers: Array(7), _layers: {…}, _zoomBoundLayers: {…}, _sizeChanged: false, …}
-// map.distance({lat: -9.4, lng: 17.4}, {lat: 0, lng: 0});
-// 2191363.956095504
-// map.distance({lat: -9.4, lng: 17.4}, {lat: 41.878113, lng: -87.629799});
-// 11945516.868386751
+
+ //   function distanceCalc(map) {
+
+   // event() {options: {…}, _handlers: Array(7), _layers: {…}, _zoomBoundLayers: {…}, _sizeChanged: false, …}
+   // map.distance({lat: -9.4, lng: 17.4}, {lat: 0, lng: 0});
+   // 2191363.956095504
+   // map.distance({lat: -9.4, lng: 17.4}, {lat: 41.878113, lng: -87.629799});
+   // 11945516.868386751
+   // }
+
 
         const item = data.data.map(function(item) {
             var [dt,,,latitude,latDir, longitude, lonDir] = item;
@@ -66,6 +70,6 @@ function getFireballData() {
 //added event listener to search button to run getCityGeoData function
     searchButton.addEventListener('click', function(event) {
         event.preventDefault()
-        //getCityGeoData();
+        getCityGeoData();
         getFireballData();
        });
