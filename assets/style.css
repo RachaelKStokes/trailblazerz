@@ -44,13 +44,6 @@ div div button {
     top: 300px;
     left: 850px;
 }
-/*added background image options*/
-/*body {
-    /*background-image: url("../images/adrian-n-ijxO4L-le4c-unsplash.jpg");*/
-    /*background-image: url("../images/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg");*/
-    /*background-image: url("../images/alexander-andrews-cdjsw6sjwly-unsplash cropped.jpg");
-    background-size: cover;
-}*/
 
 /*added background img formatting RS */
 #background img {
@@ -75,6 +68,8 @@ button {
     font-weight: 600;
     border-color: white;
 }
+
+
 
 /*resize options RS */
 @media screen and (max-width: 1080px) {

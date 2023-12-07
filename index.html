@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="assets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--added api links-->
     <link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
 </head>
 <!-- added html structure-->
 <!-- add a font family-->
@@ -20,7 +24,7 @@
     <!--moved h1 into header for css-->
     <h1 class="mt-2">TRAILBLAZERZ</h1>
   </header>
-    <div name="homePage" class="d-flex flex-column text-center">
+    <div id="homePage" class="d-flex flex-column text-center">
 
         <h2 class="font-weight-bolder">Instructions</h2>
         <h4 class="">Type in a city where you want to find the nearest fireball impact on the ground. See what turns up!</h4>
@@ -32,14 +36,14 @@
 
     </div>
 
-    <div name="mapPage">
-        <ul name="incidents">
-        </ul>
+    <div id="map">
 
-    <section name="map"></section>
-        
     </div>
 </body>
 <!--linked js-->
 <script src="assets/script.js"></script>
+<!--added api script-->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+crossorigin=""></script>
 </html>
