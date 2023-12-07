@@ -1,57 +1,24 @@
 /*added header formatting */
 header {
-    position: relative;
     text-align: center;
 
 }
 /*added positioning and display formatting RS*/
 header h1 {
-    position: absolute;
     display: inline-block;
-    top: 8px;
-    left: 475px;
-    padding: 15px;
+    padding: 20px;
     font-family: "Faster One", sans-serif;
-    font-size: 110px;
+    font-size: 120px;
     background: linear-gradient(to bottom, #f32170, 
                     #ff6b08, #eedd44); 
             -webkit-text-fill-color: transparent; 
             -webkit-background-clip: text;
+    transform: translateX(-50%);
+    position: relative;
+    left: 50%;
     
 }
-/*added div classes to css to manipulate text components individually RS*/
-div h2 {
-    position:absolute;
-    top: 200px;
-    left: 870px;
-}
-
-div h4 {
-    position: absolute;
-    top: 250px;
-    left: 475px;
-}
-
-div div textarea {
-    position: absolute;
-    display: block;
-    top: 250px;
-    left: 650px;
-}
-
-div div button {
-    position: absolute;
-    top: 300px;
-    left: 850px;
-}
-/*added background image options*/
-/*body {
-    /*background-image: url("../images/adrian-n-ijxO4L-le4c-unsplash.jpg");*/
-    /*background-image: url("../images/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg");*/
-    /*background-image: url("../images/alexander-andrews-cdjsw6sjwly-unsplash cropped.jpg");
-    background-size: cover;
-}*/
-
+/*took out unnecessary styling*/
 /*added background img formatting RS */
 #background img {
   min-height: 100%;
@@ -67,6 +34,8 @@ div div button {
 }
 /*added button styling*/
 button {
+    padding: 10px 20px; 
+    font-size: 16px;
     border-radius: 10px;
     background-color: #ff6b08;
     background: linear-gradient(to bottom, #f32170, 
@@ -76,16 +45,17 @@ button {
     border-color: white;
 }
 
+#map {
+    width: 100%;
+    height: 400px;
+}
+
+
 /*resize options RS */
-@media screen and (max-width: 1080px) {
-    background.img {
-        left: 50%;
-        margin-left: -512px;
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 36px;
     }
-    /*resize headers etc
-   /* header h1 {
-        position: absolute;
-        left: 150px; */
     
 }
     
