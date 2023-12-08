@@ -7,6 +7,7 @@ var map = L.map('map', {
     zoom: 13
 });
 var storedFireballData;
+var distanceArray = [];
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -17,12 +18,24 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // added code for map
 function calcDistance(fireballs, city) {
   
+    distanceArray = [];
+
     for (var fireball of fireballs) {
-        console.log("1");
         var distance = map.distance(fireball, city);
-        console.log(distance);
+        distanceArray.push(distance);
     }
-    map.panTo(new L.LatLng(city.lat, city.lng));
+
+    var targetFireball = [];
+    targetFireball.push()
+    distanceArray.push(distance);
+    //console.log(distance);
+    var minDistance = Math.min(...distanceArray);
+    var minDistanceIndex = distanceArray.indexOf(minDistance);
+    var closest = fireballs[minDistanceIndex];
+
+    // console.log("shortest distance =",fireballs[minDistanceIndex]);
+
+    map.panTo(new L.LatLng(closest.lat, closest.lng));
 };
 
 
@@ -59,10 +72,11 @@ function mapFireballData(data) {
         if (lonDir === 'W') {
             lng = lng * -1;
         }
-        console.log('DATE', dt);
-        console.log('LAT', lat);
-        console.log('LON', lng);
-         // var marker = L.marker([city.lat, city.lng]).update(marker);
+        // console.log('DATE', dt);
+        // console.log('LAT', lat);
+        // console.log('LON', lng);
+        var marker = new L.marker([lat, lng]);
+        marker.addTo(map);
         return { lat, lng };
     });
 }
