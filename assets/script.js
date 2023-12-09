@@ -8,7 +8,7 @@ var map = L.map('map', {
 });
 var storedFireballData;
 var distanceArray = [];
-
+//cleaned up console logs
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -28,12 +28,9 @@ function calcDistance(fireballs, city) {
     var targetFireball = [];
     targetFireball.push()
     distanceArray.push(distance);
-    //console.log(distance);
     var minDistance = Math.min(...distanceArray);
     var minDistanceIndex = distanceArray.indexOf(minDistance);
     var closest = fireballs[minDistanceIndex];
-
-    // console.log("shortest distance =",fireballs[minDistanceIndex]);
 
     map.panTo(new L.LatLng(closest.lat, closest.lng));
 };
@@ -49,11 +46,8 @@ function getCityGeoData() {
             return response.json();
         })
         .then(function (data) {
-            console.log(data);
             var latCity = data[0].lat;
-            console.log(latCity);
             var lonCity = data[0].lon;
-            console.log(lonCity);
             getFireballData({
                 lat: data[0].lat,
                 lng: data[0].lon,
@@ -72,9 +66,6 @@ function mapFireballData(data) {
         if (lonDir === 'W') {
             lng = lng * -1;
         }
-        // console.log('DATE', dt);
-        // console.log('LAT', lat);
-        // console.log('LON', lng);
         var marker = new L.marker([lat, lng]);
         marker.addTo(map);
         return { lat, lng };
